@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To-do List</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Chela+One&family=Comfortaa:wght@300;400;500;600;700&display=swap");
+    </style>
+  </head>
+  <body
+    class="min-h-screen w-full bg-slate-200 dark:bg-slate-900 dark:text-white"
+  >
+    <header
+      id="to-do-list"
+      class="flex h-24 min-w-full justify-center bg-transparent"
+    >
+      <nav class="sticky grid w-full grid-flow-col">
+        <h1
+          class="mt-5 justify-self-end text-5xl text-amber-600 transition-all duration-100 hover:text-amber-700 hover:transition-all hover:duration-300 md:text-7xl"
+        >
+          <a href="#to-do-list">To-do List</a>
+        </h1>
+
+        <button
+          onclick="saveTaskList()"
+          id="saveBtn"
+          class="mr-5 mt-5 h-fit w-fit justify-self-end rounded-lg bg-amber-600 p-2 text-2xl uppercase tracking-widest text-white transition-all duration-100 hover:animate-pulse md:text-5xl"
+        >
+          save
+        </button>
+      </nav>
+    </header>
+    <main class="mt-20 flex w-screen flex-col justify-center">
+      <div id="taskConteiner" class="flex">
+        <ul
+          id="taskList"
+          class="mx-auto flex flex-col items-center justify-center"
+        ></ul>
+      </div>
+      <button
+        id="addTask"
+        title="Add task"
+        class="mx-auto w-11 rounded-full bg-amber-700 p-2 text-slate-100 transition-colors delay-75 duration-500 hover:bg-indigo-600 hover:text-emerald-500"
+        onclick="buildTask()"
+      >
+        &CirclePlus;
+      </button>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
